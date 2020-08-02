@@ -13,7 +13,7 @@ If a Module is added or removed, the custom User Navigation is also updated.
 * Open the Solution
 * Start Debugging or Start without Debugging...
 
-The compiled WebClient is in the wwwroot Folder, there no more Steps are necessary to run the Demo.  
+The compiled WebClient is in the wwwroot Folder, no more Steps necessary to run the Demo.  
 Just open the Browser, and navigate to `https://localhost:5001`
 
 As this is just a Demo you do not need any User Credentials or something similar.
