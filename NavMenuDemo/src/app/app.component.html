@@ -1,0 +1,46 @@
+<nz-layout class="app-layout">
+  <nz-sider class="menu-sidebar"
+            nzCollapsible
+            nzWidth="256px"
+            nzBreakpoint="md"
+            [(nzCollapsed)]="isCollapsed"
+            [nzTrigger]="null"
+            nzTheme="light">
+    <div class="sidebar-logo">
+
+        <h1>NavigationDemo</h1>
+
+    </div>
+    <tree-root [nodes]="(navMenu$ | async) || []" [options]="options" style="flex-grow: 1; overflow: hidden;" (moveNode)="onMoveNode($event)" #tree>
+      <ng-template #treeNodeWrapperTemplate let-node let-index="index">
+        <div class="node-wrapper" xaStopClickPropagation
+            
+            [style.padding-left]="node.getNodePadding()" (click)="node.mouseAction('click', $event)">
+
+            <div style="display:flex; flex-direction:row; padding-left: 5px;">
+                <div class="expander-area" *ngIf="node.hasChildren"
+                    (click)="clickFolderExpander(node, $event)" style="width: 20px; padding-left: 6px;">
+                    <fa-icon nz-icon [icon]="['fas', 'angle-right']" style="margin-top:6px; width: 8px;" *ngIf="!node.isExpanded"></fa-icon>
+                    <fa-icon nz-icon [icon]="['fas', 'angle-down']" style="margin-top:6px; width: 8px;" *ngIf="node.isExpanded"></fa-icon>
+                </div>
+                <div *ngIf="!node.hasChildren" style="width: 20px; padding-left: 6px;">
+
+                </div>
+                <div class="node-content-wrapper" [class.node-content-wrapper-active]="node.isActive"
+                    [class.node-content-wrapper-focused]="node.isFocused"
+                    (dblclick)="node.mouseAction('dblClick', $event)"
+                    (treeDrop)="node.onDrop($event)" [treeAllowDrop]="node.allowDrop" [treeDrag]="node"
+                    [treeDragEnabled]="true">
+                    <tree-node-content [node]="node" [index]="index"></tree-node-content>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+    </tree-root>
+  </nz-sider>
+  <nz-layout>
+    <nz-content>
+      
+    </nz-content>
+  </nz-layout>
+</nz-layout>

@@ -1,0 +1,7 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~angular-tree-component/dist/angular-tree-component.css";
+
+.ant-layout-sider-children {
+    display:flex;
+    flex-direction: column;
+}
