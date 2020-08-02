@@ -1,0 +1,102 @@
+[
+    {
+        "Id": "33f2661e-c17b-4b54-a1ee-dfe7d29120fc",
+        "Label": "Admin",
+        "Image": "image",
+        "Href": "Href",
+        "Parent": null,
+        "AllowedRoles": [
+            "Admin"
+        ],
+        "SubNavItems": [
+            {
+                "Id": "2787fbaa-d31e-4a68-8e21-bc2c1b159446",
+                "Label": "Users",
+                "Image": "image",
+                "Href": "Href",
+                "Parent": null,
+                "AllowedRoles": [
+                    "Admin"
+                ]
+            },
+            {
+                "Id": "2075ae6b-b9f5-4d79-80c1-a53ee0cebada",
+                "Label": "Clients",
+                "Image": "image",
+                "Href": "Href",
+                "Parent": null,
+                "AllowedRoles": [
+                    "Admin"
+                ]
+            }
+        ]
+    },
+    {
+        "Id": "8abc3df9-6cf0-487f-a599-8412f6248130",
+        "Label": "Reporting",
+        "Image": "image",
+        "Href": "Href",
+        "Parent": null,
+        "AllowedRoles": [
+            "Admin",
+            "Reporter"
+        ],
+        "SubNavItems": [
+            {
+                "Id": "677acd2c-463e-4d46-af72-43c3935c107e",
+                "Label": "GenerateReports",
+                "Image": "image",
+                "Href": "Href",
+                "Parent": null,
+                "AllowedRoles": [
+                    "Admin",
+                    "Reporter"
+                ]
+            },
+            {
+                "Id": "231e3762-d706-40a3-8acc-8ec1b0937ea2",
+                "Label": "Delete Report",
+                "Image": "image",
+                "Href": "Href",
+                "Parent": null,
+                "AllowedRoles": [
+                    "Admin"
+                ]
+            }
+        ]
+    },
+    {
+        "Id": "4abdad02-ba78-4880-a62d-3ce4795757fe",
+        "Label": "Shop",
+        "Image": "image",
+        "Href": "Href",
+        "Parent": null,
+        "AllowedRoles": [
+            "Customer",
+            "Admin"
+        ],
+        "SubNavItems": [
+            {
+                "Id": "f3665169-6e41-42fa-8f96-66a20c3b7e11",
+                "Label": "Delete Item",
+                "Image": "image",
+                "Href": "Href",
+                "Parent": null,
+                "AllowedRoles": [
+                    "Admin"
+                ]
+            },
+            {
+                "Id": "99e66ef2-c35b-4912-9cda-367882aaf62c",
+                "Label": "Show Item",
+                "Image": "image",
+                "Href": "Href",
+                "Parent": null,
+                "AllowedRoles": [
+                    "Customer",
+                    "admin"
+                ]
+            }
+        ]
+    }
+]
